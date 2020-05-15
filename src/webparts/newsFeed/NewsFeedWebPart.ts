@@ -12,8 +12,6 @@ import axios, {AxiosRequestConfig} from "axios";
 import NewsHttpClient from "./NewsHttpClient";
 import {SPComponentLoader} from "@microsoft/sp-loader";
 
-require('materialize-css');
-
 export interface INewsFeedWebPartProps {
   description: string;
 }
