@@ -1,6 +1,7 @@
 ## news-webpart
 
-This is where you include your WebPart documentation.
+Screenshot
+![alt_text](screenshots/news-webpart-screenshot.png)
 
 ### Building the code
 
