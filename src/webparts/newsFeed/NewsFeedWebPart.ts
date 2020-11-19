@@ -1,16 +1,9 @@
 import {Version} from '@microsoft/sp-core-library';
-import {
-  IPropertyPaneConfiguration,
-  PropertyPaneTextField
-} from '@microsoft/sp-property-pane';
+import {IPropertyPaneConfiguration, PropertyPaneTextField} from '@microsoft/sp-property-pane';
 import {BaseClientSideWebPart} from '@microsoft/sp-webpart-base';
-import {escape} from '@microsoft/sp-lodash-subset';
-
 import styles from './NewsFeedWebPart.module.scss';
 import * as strings from 'NewsFeedWebPartStrings';
-import axios, {AxiosRequestConfig} from "axios";
-import NewsHttpClient from "./NewsHttpClient";
-import {SPComponentLoader} from "@microsoft/sp-loader";
+import axios from "axios";
 
 export interface INewsFeedWebPartProps {
   description: string;
@@ -70,8 +63,10 @@ export default class NewsFeedWebPart extends BaseClientSideWebPart <INewsFeedWeb
   }
 
   private _getNewsListData() {
+    let api = process.env.SPFX_APP_API_KEY;
+    console.log(api);
     // @ts-ignore
-    return axios.get(`https://newsapi.org/v2/everything?q=covid&apiKey=be551f2f05a54f679e5e8297e39fac0e`)
+    return axios.get(`https://newsapi.org/v2/everything?q=covid&apiKey=${api}`)
       .then((response) => {
         console.log(response);
         return response.data.articles;

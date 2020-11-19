@@ -33,3 +33,7 @@ obj
 
 # IntelliJ Files
 .idea
+
+# ENV File
+.env
+.env.local
