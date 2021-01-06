@@ -20,7 +20,7 @@
     "@types/es6-promise": "0.0.33",
     "@types/npm": "^2.0.31",
     "@types/webpack-env": "1.13.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "dotenv-expand": "^5.1.0",
     "newsapi": "^2.4.0"
